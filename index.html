@@ -464,5 +464,34 @@ footer{background:var(--navy);border-top:1px solid rgba(255,255,255,0.08);paddin
   </div>
 </footer>
 
+
+<!-- Cookie Consent Banner -->
+<div id="cookie-banner" style="display:none;position:fixed;bottom:0;left:0;right:0;z-index:9999;background:#0F2340;border-top:1px solid rgba(255,255,255,0.1);padding:16px 32px;display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap;">
+  <p style="font-size:13px;color:rgba(255,255,255,0.75);line-height:1.6;margin:0;flex:1;min-width:260px;">
+    We use cookies to improve your experience and analyse site traffic. By clicking Accept, you agree to our use of cookies.
+    <a href="/privacy.html" style="color:#4A9EFF;text-decoration:underline;margin-left:4px;">Privacy Policy</a>
+  </p>
+  <div style="display:flex;gap:10px;flex-shrink:0;">
+    <button id="cookie-decline" style="padding:9px 20px;border-radius:7px;border:1.5px solid rgba(255,255,255,0.25);background:transparent;color:rgba(255,255,255,0.7);font-family:'DM Sans',sans-serif;font-size:13px;font-weight:600;cursor:pointer;">Decline</button>
+    <button id="cookie-accept" style="padding:9px 20px;border-radius:7px;border:none;background:#1D6FF2;color:white;font-family:'DM Sans',sans-serif;font-size:13px;font-weight:600;cursor:pointer;">Accept</button>
+  </div>
+</div>
+<script>
+  (function() {
+    var consent = localStorage.getItem('equipset_cookie_consent');
+    var banner = document.getElementById('cookie-banner');
+    if (!consent) {
+      banner.style.display = 'flex';
+    }
+    document.getElementById('cookie-accept').addEventListener('click', function() {
+      localStorage.setItem('equipset_cookie_consent', 'accepted');
+      banner.style.display = 'none';
+    });
+    document.getElementById('cookie-decline').addEventListener('click', function() {
+      localStorage.setItem('equipset_cookie_consent', 'declined');
+      banner.style.display = 'none';
+    });
+  })();
+</script>
 </body>
 </html>
