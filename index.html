@@ -322,11 +322,33 @@ footer{background:var(--navy);border-top:1px solid rgba(255,255,255,0.08);paddin
   <div class="cta-inner">
     <h2>Ready to ditch the paper?</h2>
     <p>Start your 14-day free trial today. No credit card, no commitment — just a safer, more organised site from day one.</p>
-    <div class="cta-form">
-      <input type="email" placeholder="Enter your work email" />
-      <a href="https://equipset.app" class="btn btn-primary">Get started</a>
-    </div>
-    <p class="cta-note">14-day free trial &nbsp;&middot;&nbsp; No credit card required &nbsp;&middot;&nbsp; Cancel any time</p>
+    <form class="cta-form" action="https://formspree.io/f/xeevqpoz" method="POST" id="cta-form">
+      <input type="email" name="email" placeholder="Enter your work email" required />
+      <button type="submit" class="btn btn-primary">Get started</button>
+    </form>
+    <p class="cta-note" id="cta-note">14-day free trial &nbsp;&middot;&nbsp; No credit card required &nbsp;&middot;&nbsp; Cancel any time</p>
+    <script>
+      document.getElementById('cta-form').addEventListener('submit', async function(e) {
+        e.preventDefault();
+        const form = e.target;
+        const note = document.getElementById('cta-note');
+        try {
+          const res = await fetch(form.action, {
+            method: 'POST',
+            body: new FormData(form),
+            headers: { 'Accept': 'application/json' }
+          });
+          if (res.ok) {
+            form.innerHTML = '<p style="color:rgba(255,255,255,0.85);font-size:15px;font-weight:600;">Thanks! We'll be in touch soon.</p>';
+            note.style.display = 'none';
+          } else {
+            note.textContent = 'Something went wrong. Please try again.';
+          }
+        } catch {
+          note.textContent = 'Something went wrong. Please try again.';
+        }
+      });
+    </script>
   </div>
 </section>
 
