@@ -185,10 +185,12 @@ h1 em{font-style:normal;color:#4A9EFF}
 .cta-inner{max-width:640px;margin:0 auto;position:relative;z-index:1}
 .cta-inner h2{font-family:'Syne',sans-serif;font-size:42px;font-weight:800;color:var(--white);letter-spacing:-0.03em;line-height:1.15;margin-bottom:16px}
 .cta-inner p{font-size:16px;color:rgba(255,255,255,0.6);line-height:1.65;margin-bottom:36px}
-.cta-form{display:flex;gap:10px;max-width:440px;margin:0 auto 16px}
-.cta-form input{flex:1;padding:13px 16px;border-radius:8px;border:1.5px solid rgba(255,255,255,0.15);background:rgba(255,255,255,0.06);color:white;font-family:'DM Sans',sans-serif;font-size:14px;outline:none}
-.cta-form input::placeholder{color:rgba(255,255,255,0.35)}
-.cta-form input:focus{border-color:rgba(29,111,242,0.6);background:rgba(255,255,255,0.09)}
+.cta-form{display:flex;flex-direction:column;gap:10px;max-width:440px;margin:0 auto 16px;text-align:left}
+.cta-form input,.cta-form textarea{width:100%;padding:13px 16px;border-radius:8px;border:1.5px solid rgba(255,255,255,0.15);background:rgba(255,255,255,0.06);color:white;font-family:'DM Sans',sans-serif;font-size:14px;outline:none}
+.cta-form textarea{min-height:96px;resize:vertical;line-height:1.5}
+.cta-form input::placeholder,.cta-form textarea::placeholder{color:rgba(255,255,255,0.35)}
+.cta-form input:focus,.cta-form textarea:focus{border-color:rgba(29,111,242,0.6);background:rgba(255,255,255,0.09)}
+.cta-form button{width:100%;justify-content:center;margin-top:4px}
 .cta-note{font-size:12px;color:rgba(255,255,255,0.3)}
 footer{background:var(--navy);border-top:1px solid rgba(255,255,255,0.08);padding:48px 32px 32px}
 .footer-inner{max-width:1100px;margin:0 auto}
@@ -391,7 +393,9 @@ footer{background:var(--navy);border-top:1px solid rgba(255,255,255,0.08);paddin
     <h2>Ready to ditch the paper?</h2>
     <p>Start your 14-day free trial today. No credit card, no commitment — just a safer, more organised site from day one.</p>
     <form class="cta-form" action="https://formspree.io/f/xeevqpoz" method="POST" id="cta-form">
+      <input type="text" name="company" placeholder="Company name" required />
       <input type="email" name="email" placeholder="Enter your work email" required />
+      <textarea name="message" placeholder="Tell us about your needs (optional)"></textarea>
       <button type="submit" class="btn btn-primary">Get started</button>
     </form>
     <p class="cta-note" id="cta-note">14-day free trial &nbsp;&middot;&nbsp; No credit card required &nbsp;&middot;&nbsp; Cancel any time</p>
@@ -407,7 +411,7 @@ footer{background:var(--navy);border-top:1px solid rgba(255,255,255,0.08);paddin
             headers: { 'Accept': 'application/json' }
           });
           if (res.ok) {
-            form.innerHTML = '<p style="color:rgba(255,255,255,0.85);font-size:15px;font-weight:600;">Thanks! We'll be in touch soon.</p>';
+            form.innerHTML = `<p style="color:rgba(255,255,255,0.85);font-size:15px;font-weight:600;">Thanks! We'll be in touch soon.</p>`;
             note.style.display = 'none';
           } else {
             note.textContent = 'Something went wrong. Please try again.';
