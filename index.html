@@ -40,7 +40,7 @@
   "offers": [
     {
       "@type": "Offer",
-      "name": "Starter",
+      "name": "Subcontractor",
       "price": "49",
       "priceCurrency": "EUR",
       "priceSpecification": {
@@ -50,8 +50,18 @@
     },
     {
       "@type": "Offer",
+      "name": "Standard",
+      "price": "99",
+      "priceCurrency": "EUR",
+      "priceSpecification": {
+        "@type": "UnitPriceSpecification",
+        "billingDuration": "P1M"
+      }
+    },
+    {
+      "@type": "Offer",
       "name": "Pro",
-      "price": "149",
+      "price": "199",
       "priceCurrency": "EUR",
       "priceSpecification": {
         "@type": "UnitPriceSpecification",
@@ -61,6 +71,12 @@
     {
       "@type": "Offer",
       "name": "Enterprise",
+      "price": "349",
+      "priceCurrency": "EUR",
+      "priceSpecification": {
+        "@type": "UnitPriceSpecification",
+        "billingDuration": "P1M"
+      },
       "availability": "https://schema.org/InStock"
     }
   ],
@@ -345,47 +361,47 @@ footer{background:var(--navy);border-top:1px solid rgba(255,255,255,0.08);paddin
 <section class="pricing" id="pricing">
   <div class="section-inner">
     <div class="section-label">Pricing</div>
-    <div class="section-title">Simple, honest pricing</div>
-    <p class="section-sub">All plans include a 14-day free trial. No credit card required. Cancel any time.</p>
+    <div class="section-title">One price for the whole company</div>
+    <p class="section-sub">Every plan includes unlimited users — everyone on site, no per-seat charges. 14-day free trial, no credit card required, cancel any time. Pay annually and get two months free.</p>
     <div class="pricing-grid">
       <div class="price-card">
-        <div class="price-tier">Starter</div>
-        <div class="price-amount"><strong>&#8364;49</strong><span>/month</span></div>
-        <p class="price-desc">Small contractors and sole traders getting started with digital inspections.</p>
+        <div class="price-tier">Standard</div>
+        <div class="price-amount"><strong>&#8364;99</strong><span>/month</span></div>
+        <p class="price-desc">Small contractors getting the whole company onto digital inspections and compliance.</p>
         <div class="price-divider"></div>
         <ul class="price-features">
-          <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#18A865" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Up to 10 appliances</li>
-          <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#18A865" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>3 user accounts</li>
-          <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#18A865" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Inspections, actions &amp; documents</li>
-          <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#18A865" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>2GB storage</li>
-          <li class="dim"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#9AAABF" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>Gate sign-in, RAMS &amp; H&amp;S modules</li>
-          <li class="dim"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#9AAABF" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>Hire management</li>
+          <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#18A865" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Unlimited users — everyone on site</li>
+          <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#18A865" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Up to 3 active sites</li>
+          <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#18A865" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Up to 100 equipment items</li>
+          <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#18A865" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Every module — gate, RAMS, H&amp;S audits, incidents</li>
+          <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#18A865" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Compliance &amp; certifications</li>
+          <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#18A865" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>10GB storage</li>
         </ul>
         <a href="https://equipset.app" class="btn btn-dark" style="width:100%;justify-content:center">Start free trial</a>
       </div>
       <div class="price-card featured">
         <div class="price-badge">Most popular</div>
         <div class="price-tier">Pro</div>
-        <div class="price-amount"><strong>&#8364;149</strong><span>/month</span></div>
+        <div class="price-amount"><strong>&#8364;199</strong><span>/month</span></div>
         <p class="price-desc">Growing contractors managing multiple sites and a larger fleet.</p>
         <div class="price-divider"></div>
         <ul class="price-features">
-          <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#18A865" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Up to 50 appliances</li>
-          <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#18A865" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>15 user accounts</li>
+          <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#18A865" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Unlimited users — everyone on site</li>
+          <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#18A865" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Up to 10 active sites</li>
+          <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#18A865" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Up to 500 equipment items</li>
           <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#18A865" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Every module — gate, RAMS, H&amp;S audits, incidents</li>
-          <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#18A865" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>10GB storage</li>
-          <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#18A865" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Compliance &amp; certifications</li>
-          <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#18A865" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Hire management</li>
+          <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#18A865" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Compliance, certifications &amp; hire management</li>
+          <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#18A865" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>25GB storage</li>
         </ul>
         <a href="https://equipset.app" class="btn btn-primary" style="width:100%;justify-content:center">Start free trial</a>
       </div>
       <div class="price-card">
         <div class="price-tier">Enterprise</div>
-        <div class="price-amount"><strong style="font-size:26px">Contact for pricing</strong></div>
+        <div class="price-amount"><span>from</span><strong>&#8364;349</strong><span>/month</span></div>
         <p class="price-desc">Large contractors and plant hire companies with complex requirements.</p>
         <div class="price-divider"></div>
         <ul class="price-features">
-          <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#18A865" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Unlimited appliances</li>
+          <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#18A865" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Unlimited sites &amp; equipment</li>
           <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#18A865" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Unlimited users</li>
           <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#18A865" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Every module + priority support</li>
           <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#18A865" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>50GB storage</li>
@@ -394,6 +410,10 @@ footer{background:var(--navy);border-top:1px solid rgba(255,255,255,0.08);paddin
         </ul>
         <a href="#contact" class="btn btn-dark" style="width:100%;justify-content:center">Contact us</a>
       </div>
+    </div>
+    <div style="margin-top:32px;background:var(--white);border:1px solid var(--grey200);border-radius:14px;padding:24px 28px;display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap">
+      <p style="font-size:14px;color:var(--grey600);line-height:1.6;margin:0"><strong style="color:var(--navy)">Subcontractor?</strong> Machine certs, GA1s and crew tickets — without the site-management modules — for a flat <strong style="color:var(--navy)">&#8364;49/month</strong>, whole firm included.</p>
+      <a href="/subcontractors.html" class="btn btn-dark">See the Subcontractor edition</a>
     </div>
   </div>
 </section>
