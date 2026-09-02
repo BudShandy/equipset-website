@@ -93,7 +93,11 @@ footer{background:var(--navy);border-top:1px solid rgba(255,255,255,0.08);paddin
   .nav-links{display:none}
 }
 @media(max-width:600px){
-  .nav-inner{padding:0 16px}
+  .nav-inner{padding:0 12px;gap:8px}
+  .nav-logo{gap:7px}
+  .nav-logo span{font-size:17px}
+  .nav-cta{gap:6px}
+  .nav-cta .btn{padding:8px 11px;font-size:12px}
   .btn{padding:9px 14px;font-size:13px}
   .hero{padding:116px 20px 60px}
   h1{font-size:31px}
@@ -102,6 +106,9 @@ footer{background:var(--navy);border-top:1px solid rgba(255,255,255,0.08);paddin
   .cta-inner h2{font-size:28px}
   .footer-top{grid-template-columns:1fr;gap:32px}
   .footer-bottom{flex-direction:column;gap:10px;text-align:center}
+}
+@media(max-width:400px){
+  .nav-logo span{display:none}
 }
 </style>
 </head>
