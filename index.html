@@ -91,8 +91,8 @@
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 :root{
-  --navy:#0F2340;--navy-light:#1A3560;--blue:#1D6FF2;--blue-mid:#2B7FFF;
-  --blue-light:#EBF2FF;--accent:#F5A623;--red:#E5323B;--green:#18A865;
+  --navy:#101827;--navy-light:#172337;--blue:#F59E0B;--blue-mid:#D97706;
+  --blue-light:#FFF4D6;--accent:#F59E0B;--red:#E5323B;--green:#18A865;
   --grey50:#F8FAFC;--grey100:#F0F4F8;--grey200:#DDE5EF;--grey400:#9AAABF;
   --grey600:#5A6880;--grey800:#1E2A3B;--white:#FFFFFF;
 }
@@ -103,6 +103,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(15,35,64,0.9
 .nav-inner{max-width:1100px;margin:0 auto;padding:0 32px;height:64px;display:flex;align-items:center;justify-content:space-between}
 .nav-logo{display:flex;align-items:center;gap:10px}
 .nav-logo span{color:var(--white);font-family:'Syne',sans-serif;font-weight:700;font-size:20px;letter-spacing:-0.02em}
+.mark{width:28px;height:28px;border-radius:7px;background:#101827;position:relative;display:inline-block}.mark:before,.mark:after{content:'';position:absolute;background:#F59E0B;transform:skewX(-18deg)}.mark:before{width:8px;height:20px;left:7px;top:4px}.mark:after{width:8px;height:13px;right:5px;bottom:4px}
 .nav-links{display:flex;align-items:center;gap:32px}
 .nav-links a{color:rgba(255,255,255,0.65);font-size:14px;font-weight:500;transition:color 0.2s}
 .nav-links a:hover{color:var(--white)}
@@ -116,13 +117,13 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(15,35,64,0.9
 .btn-dark{background:var(--navy);color:white}
 .btn-dark:hover{background:var(--navy-light)}
 .hero{background:var(--navy);padding:140px 32px 100px;position:relative;overflow:hidden}
-.hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 80% 60% at 60% 40%, rgba(29,111,242,0.18) 0%, transparent 70%)}
+.hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 80% 60% at 60% 40%, rgba(245,158,11,0.18) 0%, transparent 70%)}
 .hero-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,0.03) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,0.03) 1px,transparent 1px);background-size:48px 48px;mask-image:radial-gradient(ellipse at 60% 50%, black 30%, transparent 75%)}
 .hero-inner{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center;position:relative;z-index:1}
-.hero-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(29,111,242,0.2);border:1px solid rgba(29,111,242,0.4);padding:6px 14px;border-radius:100px;font-size:12px;font-weight:600;color:#7FB3FF;letter-spacing:0.05em;text-transform:uppercase;margin-bottom:24px}
-.hero-badge span{width:6px;height:6px;border-radius:50%;background:#4A9EFF;display:inline-block}
+.hero-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(245,158,11,0.2);border:1px solid rgba(245,158,11,0.4);padding:6px 14px;border-radius:100px;font-size:12px;font-weight:600;color:#FCD34D;letter-spacing:0.05em;text-transform:uppercase;margin-bottom:24px}
+.hero-badge span{width:6px;height:6px;border-radius:50%;background:#FBBF24;display:inline-block}
 h1{font-family:'Syne',sans-serif;font-size:52px;font-weight:800;color:var(--white);line-height:1.1;letter-spacing:-0.03em;margin-bottom:20px}
-h1 em{font-style:normal;color:#4A9EFF}
+h1 em{font-style:normal;color:#FBBF24}
 .hero-sub{font-size:17px;color:rgba(255,255,255,0.6);line-height:1.65;margin-bottom:36px;max-width:480px}
 .hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:48px}
 .hero-stats{display:flex;gap:24px 32px;flex-wrap:wrap}
@@ -160,7 +161,7 @@ h1 em{font-style:normal;color:#4A9EFF}
 .section-sub{font-size:16px;color:var(--grey600);line-height:1.65;max-width:560px;margin-bottom:56px}
 .features-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
 .feature-card{background:var(--white);border:1px solid var(--grey200);border-radius:14px;padding:28px;transition:all 0.25s}
-.feature-card:hover{border-color:rgba(29,111,242,0.3);transform:translateY(-3px);box-shadow:0 12px 40px rgba(29,111,242,0.08)}
+.feature-card:hover{border-color:rgba(245,158,11,0.3);transform:translateY(-3px);box-shadow:0 12px 40px rgba(245,158,11,0.08)}
 .feature-icon{width:44px;height:44px;border-radius:10px;background:var(--blue-light);display:flex;align-items:center;justify-content:center;margin-bottom:16px}
 .feature-title{font-family:'Syne',sans-serif;font-size:16px;font-weight:700;color:var(--navy);margin-bottom:8px}
 .feature-text{font-size:14px;color:var(--grey600);line-height:1.6}
@@ -174,7 +175,7 @@ h1 em{font-style:normal;color:#4A9EFF}
 .pricing{padding:96px 32px;background:var(--grey50)}
 .pricing-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:56px}
 .price-card{background:var(--white);border:1px solid var(--grey200);border-radius:16px;padding:32px;position:relative;transition:all 0.25s}
-.price-card.featured{border:2px solid var(--blue);box-shadow:0 0 0 4px rgba(29,111,242,0.08)}
+.price-card.featured{border:2px solid var(--blue);box-shadow:0 0 0 4px rgba(245,158,11,0.08)}
 .price-badge{position:absolute;top:-13px;left:50%;transform:translateX(-50%);background:var(--blue);color:white;font-size:11px;font-weight:700;padding:4px 14px;border-radius:100px;letter-spacing:0.06em;text-transform:uppercase;white-space:nowrap}
 .price-tier{font-family:'Syne',sans-serif;font-size:13px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--grey400);margin-bottom:8px}
 .price-amount{display:flex;align-items:baseline;gap:4px;margin-bottom:4px}
@@ -198,7 +199,7 @@ h1 em{font-style:normal;color:#4A9EFF}
 .testi-name{font-size:13px;font-weight:600;color:var(--navy)}
 .testi-role{font-size:12px;color:var(--grey400)}
 .cta-section{padding:96px 32px;background:var(--navy);position:relative;overflow:hidden;text-align:center}
-.cta-section::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 60% 80% at 50% 50%, rgba(29,111,242,0.2) 0%, transparent 70%)}
+.cta-section::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 60% 80% at 50% 50%, rgba(245,158,11,0.2) 0%, transparent 70%)}
 .cta-inner{max-width:640px;margin:0 auto;position:relative;z-index:1}
 .cta-inner h2{font-family:'Syne',sans-serif;font-size:42px;font-weight:800;color:var(--white);letter-spacing:-0.03em;line-height:1.15;margin-bottom:16px}
 .cta-inner p{font-size:16px;color:rgba(255,255,255,0.6);line-height:1.65;margin-bottom:36px}
@@ -206,7 +207,7 @@ h1 em{font-style:normal;color:#4A9EFF}
 .cta-form input,.cta-form textarea{width:100%;padding:13px 16px;border-radius:8px;border:1.5px solid rgba(255,255,255,0.15);background:rgba(255,255,255,0.06);color:white;font-family:'DM Sans',sans-serif;font-size:14px;outline:none}
 .cta-form textarea{min-height:96px;resize:vertical;line-height:1.5}
 .cta-form input::placeholder,.cta-form textarea::placeholder{color:rgba(255,255,255,0.35)}
-.cta-form input:focus,.cta-form textarea:focus{border-color:rgba(29,111,242,0.6);background:rgba(255,255,255,0.09)}
+.cta-form input:focus,.cta-form textarea:focus{border-color:rgba(245,158,11,0.6);background:rgba(255,255,255,0.09)}
 .cta-form button{width:100%;justify-content:center;margin-top:4px}
 .cta-note{font-size:12px;color:rgba(255,255,255,0.3)}
 footer{background:var(--navy);border-top:1px solid rgba(255,255,255,0.08);padding:48px 32px 32px}
@@ -259,7 +260,7 @@ footer{background:var(--navy);border-top:1px solid rgba(255,255,255,0.08);paddin
 <nav>
   <div class="nav-inner">
     <div class="nav-logo">
-      <svg width="26" height="26" viewBox="0 0 28 28" fill="none"><rect width="28" height="28" rx="7" fill="#1D6FF2"/><path d="M7 7h5v5H7zm9 0h5v5h-5zM7 16h5v5H7zm9 4h2v-2h-2zm2-4h-2v2h2zm2 0v2h2v-2zm-2 4h2v-2h-2z" fill="white"/></svg>
+      <svg width="26" height="26" viewBox="0 0 28 28" fill="none"><rect width="28" height="28" rx="7" fill="#F59E0B"/><path d="M7 7h5v5H7zm9 0h5v5h-5zM7 16h5v5H7zm9 4h2v-2h-2zm2-4h-2v2h2zm2 0v2h2v-2zm-2 4h2v-2h-2z" fill="white"/></svg>
       <span>EquipSet</span>
     </div>
     <div class="nav-links">
@@ -449,7 +450,7 @@ footer{background:var(--navy);border-top:1px solid rgba(255,255,255,0.08);paddin
     <div class="footer-top">
       <div class="footer-brand">
         <div class="nav-logo">
-          <svg width="24" height="24" viewBox="0 0 28 28" fill="none"><rect width="28" height="28" rx="7" fill="#1D6FF2"/><path d="M7 7h5v5H7zm9 0h5v5h-5zM7 16h5v5H7zm9 4h2v-2h-2zm2-4h-2v2h2zm2 0v2h2v-2zm-2 4h2v-2h-2z" fill="white"/></svg>
+          <svg width="24" height="24" viewBox="0 0 28 28" fill="none"><rect width="28" height="28" rx="7" fill="#F59E0B"/><path d="M7 7h5v5H7zm9 0h5v5h-5zM7 16h5v5H7zm9 4h2v-2h-2zm2-4h-2v2h2zm2 0v2h2v-2zm-2 4h2v-2h-2z" fill="white"/></svg>
           <span>EquipSet</span>
         </div>
         <p>The construction site management and safety platform. Built for the real world, not the boardroom.</p>
@@ -485,11 +486,11 @@ footer{background:var(--navy);border-top:1px solid rgba(255,255,255,0.08);paddin
 <div id="cookie-banner" style="display:none;position:fixed;bottom:0;left:0;right:0;z-index:9999;background:#0F2340;border-top:1px solid rgba(255,255,255,0.1);padding:16px 32px;display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap;">
   <p style="font-size:13px;color:rgba(255,255,255,0.75);line-height:1.6;margin:0;flex:1;min-width:260px;">
     We use cookies to improve your experience and analyse site traffic. By clicking Accept, you agree to our use of cookies.
-    <a href="/privacy.html" style="color:#4A9EFF;text-decoration:underline;margin-left:4px;">Privacy Policy</a>
+    <a href="/privacy.html" style="color:#FBBF24;text-decoration:underline;margin-left:4px;">Privacy Policy</a>
   </p>
   <div style="display:flex;gap:10px;flex-shrink:0;">
     <button id="cookie-decline" style="padding:9px 20px;border-radius:7px;border:1.5px solid rgba(255,255,255,0.25);background:transparent;color:rgba(255,255,255,0.7);font-family:'DM Sans',sans-serif;font-size:13px;font-weight:600;cursor:pointer;">Decline</button>
-    <button id="cookie-accept" style="padding:9px 20px;border-radius:7px;border:none;background:#1D6FF2;color:white;font-family:'DM Sans',sans-serif;font-size:13px;font-weight:600;cursor:pointer;">Accept</button>
+    <button id="cookie-accept" style="padding:9px 20px;border-radius:7px;border:none;background:#F59E0B;color:white;font-family:'DM Sans',sans-serif;font-size:13px;font-weight:600;cursor:pointer;">Accept</button>
   </div>
 </div>
 <script>
