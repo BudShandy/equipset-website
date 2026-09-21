@@ -1,0 +1,17 @@
+{
+  "routes": [
+    {
+      "route": "/resources/link-building-outreach.html",
+      "redirect": "/resources/",
+      "statusCode": 301
+    }
+  ],
+  "responseOverrides": {
+    "404": {
+      "rewrite": "/404.html"
+    }
+  },
+  "mimeTypes": {
+    ".svg": "image/svg+xml"
+  }
+}
